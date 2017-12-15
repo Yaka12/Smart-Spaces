@@ -25,7 +25,7 @@ void ofApp::setup( void ) {
     addNewTrack("1"); // Add a new track called "1" (to put the data in it) in the internal track vector of the 
     //application
    // registerDragEvent(track("1")); // Make the drag event load the dragged data in the track "1"
-	track("1").load(getDataPath() + "vitrine2_3.c3d");
+	track("1").load(getDataPath() + "vitrine2_2.c3d");
 	screen.loadImage("background.jpg");
 
 	Trace Right1trace = track("1")("Right1");
@@ -103,36 +103,38 @@ void ofApp::scene3d( void ) {
 	ofRotateY(90);
 	
 
-	float decalage = 300;
+	float decalage = 500;
+	float profondeur = 3000;
+	float scale = 1;
 
-	screen.draw(-(screen_width) / 2-decalage, 1200, 3000, screen_width, screen_height);
+	screen.draw(-(scale*screen_width) / 2-decalage, 1200, profondeur, scale*screen_width, scale*screen_height);
 	//screen.draw((head[1]-(screen_width) / 2)-250, 1200, 4000, screen_width, screen_height);
 
 	ofSetColor(255, 0, 0);
 	//Ligne gauche
 	ofVec3f point11;
-	point11.set((screen_width) / 2 - decalage, 0, 2900);
+	point11.set((scale*screen_width) / 2 - decalage, 0, profondeur-100);
 	ofVec3f point12;
-	point12.set((screen_width) / 2 - decalage, 5000, 2900);
+	point12.set((scale*screen_width) / 2 - decalage, 5000, profondeur-100);
 	ofDrawLine(point11, point12);
 
 	ofVec3f point21;
-	point21.set( -decalage- (screen_width) / 6, 0, 2900);
+	point21.set( -decalage- (scale*screen_width) / 6, 0, profondeur-100);
 	ofVec3f point22;
-	point22.set( -decalage- (screen_width) / 6, 5000, 2900);
+	point22.set( -decalage- (scale*screen_width) / 6, 5000, profondeur-100);
 	ofDrawLine(point21, point22);
 
 	ofVec3f point31;
-	point31.set(-decalage + (screen_width) / 6, 0, 2900);
+	point31.set(-decalage + (scale*screen_width) / 6, 0, profondeur-100);
 	ofVec3f point32;
-	point32.set(-decalage + (screen_width) / 6, 5000, 2900);
+	point32.set(-decalage + (scale*screen_width) / 6, 5000, profondeur-100);
 	ofDrawLine(point31, point32);
 
 
 	ofVec3f point41;
-	point41.set(-(screen_width) / 2 - decalage, 0, 2900);
+	point41.set(-(scale*screen_width) / 2 - decalage, 0, profondeur-100);
 	ofVec3f point42;
-	point42.set(-(screen_width) / 2 - decalage, 5000, 2900);
+	point42.set(-(scale*screen_width) / 2 - decalage, 5000, profondeur-100);
 	ofDrawLine(point41, point42);
 	ofPopMatrix();
 

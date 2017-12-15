@@ -34,7 +34,7 @@ class ofApp : public MoMa::SceneApp {
     void windowResized( int w, int h );
     void dragEvent( ofDragInfo dragInfo );
     void gotMessage( ofMessage msg );
-	
+	deque< pair< ofVec3f, ofVec3f > > carpet;
     MoMa::Trace COM;
 	
 	ofImage screen;
@@ -42,8 +42,8 @@ class ofApp : public MoMa::SceneApp {
 
 	//  MoMa::Track myTrack;
 
-	int screen_width = 4800;
-	int screen_height = 2700;
+	int screen_width = 4000;
+	int screen_height = 2250;
 
 
 };

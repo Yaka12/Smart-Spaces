@@ -44,6 +44,7 @@ class ofApp : public MoMa::SceneApp {
 
 	int screen_width = 4000;
 	int screen_height = 2250;
-
-
+	int G;
+	int M;
+	int D;
 };

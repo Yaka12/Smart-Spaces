@@ -47,4 +47,6 @@ class ofApp : public MoMa::SceneApp {
 	int G;
 	int M;
 	int D;
+
+	bool clicked;
 };

@@ -51,13 +51,7 @@ void ofApp::setup( void ) {
 	int M = 0;
 	int D = 0;
 
-
-	for (int f = 0; f = track("1").nOfFrames(); f++) {
-	
-	}
-
-
-
+	clicked = 0;
 
 }
 
@@ -115,8 +109,8 @@ void ofApp::scene3d(void) {
 	ofRotateY(90);
 
 
-	float decalage = 800;
-	float profondeur = 6000;
+	float decalage =750;
+	float profondeur =6000;
 	float scale = 2;
 
 	decalage = decalage*scale;
@@ -204,6 +198,7 @@ void ofApp::scene3d(void) {
 
 
 	//if premiere zone
+	if (clicked==1) {
 	if (lignevision.angle(ligne1) < ligne2.angle(ligne1)) {
 		G++;
 	}
@@ -214,16 +209,19 @@ void ofApp::scene3d(void) {
 	if (lignevision.angle(ligne1) < ligne4.angle(ligne1) && lignevision.angle(ligne1) > ligne3.angle(ligne1)){
 		D++;
 }
-
-	cout << " G: " << G << " M: " <<M<< " D: " << D << endl;
-
+	}
+	cout << " G: " << G << " M: " << M << " D: " << D << endl;
+	
 
 
 
 	light.disable();
 	ofDisableLighting();
 
+	ofSetColor(Turquoise, 128);
+
 	// This line pushes a LWrist/RWrist point pair in the memory queue named 'carpet'
+	/*
 	carpet.push_front( make_pair( toVec3f(Mid), toVec3f(FrontVector + 80 * diff) ) );
 	if( carpet.size() >  Buffsize ) carpet.pop_back(); // If memory queue >  Buffsize, oldest is removed
 	
@@ -233,7 +231,7 @@ void ofApp::scene3d(void) {
 	// We draw a line between each point pair for the
 	// size of the carpet queue = past of LWrist/RWrist
 	ofDrawLine( carpet[l].first, carpet[l].second );
-	}  
+	}  */
 }
 
 
@@ -253,8 +251,10 @@ void ofApp::annotate( void ) {
 }
 
 void ofApp::keyPressed( int key ) {
+	
+	if (key == ' ') { clicked = !clicked; }
     
-    
+
 }
 
 void ofApp::keyReleased( int key ) {
@@ -263,8 +263,11 @@ void ofApp::keyReleased( int key ) {
 }
 
 void ofApp::mousePressed( int x, int y, int button ) {
-    
-    
+ /*   
+	if (button == 1) {
+		clicked = !clicked;
+	}
+	*/
 }
 
 void ofApp::mouseReleased( int x, int y, int button ) {

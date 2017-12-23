@@ -1,10 +1,3 @@
-/**
- *
- *  @file ofApp.h
- *  @brief MotionMachine header file for empty example
- *  @copyright Numediart Institute, UMONS (c) 2015
- *
- */
 
 #pragma once
 
@@ -40,7 +33,6 @@ class ofApp : public MoMa::SceneApp {
 	ofImage screen;
 	ofLight light;
 
-	//  MoMa::Track myTrack;
 
 	int screen_width = 4000;
 	int screen_height = 2250;

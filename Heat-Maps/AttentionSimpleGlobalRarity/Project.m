@@ -10,9 +10,9 @@ set = 2;
 
 
 % Specify the paths
-image_path = strcat('Set',num2str(set),'/Images/');
-heat_maps = strcat('Set',num2str(set),'/Heat Maps/');
-basename1 = strcat('Set',num2str(set),'_');
+image_path = strcat('../Data/Set',num2str(set),'/Images/');
+heat_maps = strcat('../Data/Set',num2str(set),'/Heat Maps Global/');
+basename1 = strcat('blurred_Set',num2str(set),'_');
 basename2 = strcat('heatmap',num2str(set),'_');
 
 
@@ -23,7 +23,7 @@ FileName1=strcat(basename1,num2str(m),'.jpg')
 FileName2=strcat(basename2,num2str(m),'.jpg')
 
 I = im2double(imread(strcat(image_path, FileName1)));
-R = RARE2012(I);
+R = AttentionSimpleGlobalRarity(I);
 
 figure
 subplot(121), imagesc(I), title('Initial image')

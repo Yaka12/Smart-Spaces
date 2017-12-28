@@ -11,9 +11,9 @@ set = 2;
 
 % Specify the paths
 image_path = strcat('../Data/Set',num2str(set),'/Images/');
-heat_maps = strcat('../Data/Set',num2str(set),'/Heat Maps Global/');
+heat_maps = strcat('../Data/Set',num2str(set),'/Maps Global/');
 basename1 = strcat('blurred_Set',num2str(set),'_');
-basename2 = strcat('heatmap',num2str(set),'_');
+basename2 = strcat('map',num2str(set),'_');
 
 
 % Plot the images and their heatmaps and save them
@@ -29,6 +29,6 @@ figure
 subplot(121), imagesc(I), title('Initial image')
 subplot(122), imagesc(R), title('Saliency map')
 
-imwrite(R, strcat(heat_maps,FileName2))
+imwrite(R, strcat(maps,FileName2))
 
 end

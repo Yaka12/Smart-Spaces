@@ -36,7 +36,7 @@ Generally, these algorithms had difficulties to get the correct results on the i
 
 ### Deep learning
 
-* Deep Visual Attention Prediction (https://arxiv.org/pdf/1705.02544.pdf)
+* Grad-CAM: Why did you say that? Visual Explanations from Deep Networks via Gradient-based Localization (https://arxiv.org/pdf/1610.02391v1.pdf using the Keras-vis library (https://raghakot.github.io/keras-vis/)
 
 
 

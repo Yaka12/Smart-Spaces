@@ -20,7 +20,7 @@ To interpret the Qualisys data, we used OpenFrameworks and MotionMachine. The so
 
 ### Eye-tracking
 
-The eye tracking results were there to check the results of the head direction tracking because it is more instinctive and more accurate.
+The eye tracking results were there to check the results of the head direction tracking because it is more intuitive and more accurate.
 
 
 ## Computer-based methods

@@ -15,7 +15,7 @@ The goal is to simulate a shop window where one of the mannequin differs from th
 
 We used the Qualisys system on 10 people and show them 4 images of our "shop window". Each of these people had only a hat with 3 sensors, the goal was only to track their head orientation.
 
-To interpret the Qualisys data, we used OpenFrameworks and MotionMachine. The source code can be found in the src folder.
+To interpret the Qualisys data, we used OpenFrameworks and MotionMachine. The source code can be found in the src folder and the data in the data folder.
 
 
 ### Eye-tracking
